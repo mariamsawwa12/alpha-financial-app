@@ -1,144 +1,234 @@
 # Alpha Financial App
 
-> AI-powered personal finance mobile application built with Flutter as a multidisciplinary team project.
+**A Flutter-based personal finance application for managing expenses, financial goals, savings, and financial planning, with AI-assisted services integrated into the mobile experience.**
 
-Alpha is a personal finance application designed to help users better understand and manage their financial activity through expense tracking, financial goals, savings planning, smart insights, and AI-assisted features.
+> **Portfolio showcase:** this repository presents the product and my Flutter contribution. The complete team source code is intentionally not published here.
 
-This repository is a **public project showcase** created for portfolio purposes. The production source code is not included here because the application was developed as a team project.
+## Overview
 
-## Project Overview
+Alpha is a personal finance mobile application designed to help users understand and organize their day-to-day financial activity in one place.
 
-Alpha brings several personal-finance workflows into one mobile experience. The application combines a Flutter frontend with REST API services and AI-powered functionality developed collaboratively across the team.
+The application combines expense management, financial planning, savings allocation, goal tracking, financial cycles, notifications, receipt processing, voice interaction, and AI-assisted financial features.
 
-The product includes tools for tracking expenses, setting financial goals, allocating savings, reviewing financial insights, recording transactions by voice, analyzing receipts, and interacting with a financial chatbot.
+Alpha was developed as a multidisciplinary team project involving **Flutter, Backend, and AI development**. My responsibility was the **Flutter mobile application and service integration**.
 
 ## Key Features
 
-- Expense tracking and transaction management
-- Financial goals and progress tracking
-- Savings allocation and financial planning
-- Smart financial insights based on user-entered financial data
-- Voice-assisted transaction entry
-- Receipt analysis
-- AI-powered financial chatbot
-- Arabic and English localization
-- RTL support for Arabic
-- Light and dark themes
-- Responsive Flutter interface
+- Account registration, login, OTP verification, and password recovery
+- Multi-step personal and financial onboarding
+- Expense creation, categorization, and analytics
+- Financial-cycle management and dashboard summaries
+- Income, fixed-expense, variable-expense, and savings planning
+- Financial goals with target amounts, dates, priorities, and planned contributions
+- Receipt capture and receipt-analysis workflow
+- Voice-assisted expense input and speech-to-text interaction
+- AI-backed financial assistant integrated through backend services
+- Financial analysis with audio playback support
+- In-app financial notifications and unread-state handling
+- Arabic and English localization with RTL support
+- Light and dark themes with locally persisted preferences
 
 ## My Contribution
 
-I worked on Alpha as a **Flutter Developer**, with responsibility focused on the mobile application rather than the backend or AI model development.
+I worked on Alpha as a **Flutter Developer**. My work focused on the mobile application rather than the backend or AI model development.
 
-My contributions included:
+My responsibilities included:
 
-- Designing and implementing the application's Flutter screens and user interface
-- Building responsive mobile layouts and reusable UI components
-- Implementing navigation and frontend user flows
-- Managing application state using **Provider**
-- Integrating the Flutter application with the team's **REST APIs**
-- Connecting frontend screens to backend data and application workflows
-- Implementing Arabic/English localization with RTL support
-- Supporting light and dark themes
-- Collaborating with backend and AI team members to integrate their services into the mobile experience
-- Using Git and GitHub for collaborative development and version control
+- Designing and implementing Flutter screens and user flows
+- Building reusable widgets and maintaining a consistent mobile UI
+- Managing application state using **Provider / ChangeNotifier**
+- Integrating Flutter features with the team's **REST APIs**
+- Connecting authentication, OTP, expenses, goals, profile, financial-cycle, notification, chat, receipt, and analysis flows to backend services
+- Handling loading, validation, success, and error states in the mobile experience
+- Implementing navigation across authentication, onboarding, dashboard, expenses, goals, AI assistant, and profile flows
+- Implementing Arabic/English localization and RTL behavior
+- Implementing light/dark theme support and persistent user preferences
+- Integrating speech-to-text, camera/gallery input, receipt workflows, and audio playback on the Flutter side
+- Collaborating with Backend and AI team members during API and feature integration
+- Using Git and GitHub for collaborative development
 
 ### Contribution Scope
 
-The **backend services and AI functionality were developed by other team members**. My role was focused on the Flutter frontend, UI implementation, application-side logic, and integration of those services into the mobile application.
+| Area | Responsibility |
+| --- | --- |
+| Flutter UI & mobile experience | **My contribution** |
+| Flutter state management | **My contribution** |
+| REST API integration in Flutter | **My contribution** |
+| Navigation & frontend workflows | **My contribution** |
+| Localization & theming | **My contribution** |
+| Backend development | Team member |
+| AI model / AI backend development | Team member |
+
+The backend services and AI implementation were developed by other members of the team. My role was to integrate those capabilities into the Flutter application.
 
 ## Tech Stack
 
-### Mobile Development
+### Mobile
 - Flutter
 - Dart
-- Provider
-- REST API Integration
-- Localization / RTL
-- Responsive UI
-- Light & Dark Theme Support
 
-### Team-Level Technologies
-- RESTful backend services
-- AI-powered financial features
-- Git & GitHub
+### State Management
+- Provider
+- ChangeNotifier
+
+### Backend Integration
+- REST APIs
+- Dart `http`
+- JSON response mapping
+- Access-token and refresh-token handling
+
+### Local Persistence
+- SharedPreferences
+
+### Localization
+- easy_localization
+- Arabic / English
+- RTL support
+
+### Media & Interaction
+- image_picker
+- camera
+- speech_to_text
+- record
+- just_audio
+
+### UI & Visualization
+- fl_chart
+- percent_indicator
+- google_fonts
+- table_calendar
+- smooth_page_indicator
+- pinput
+
+### Receipt Processing
+- google_mlkit_text_recognition
+- Camera/gallery receipt input
+- Backend receipt-analysis integration
+
+### Development
+- Git
+- GitHub
 
 ## Architecture
 
-The Flutter application was organized using a structured separation of concerns with an MVC-oriented approach and Provider-based state management.
-
-Typical frontend flow:
+The Flutter application uses a practical layered structure with **Provider-based state management**.
 
 ```text
-UI / Screens
-     ↓
-Providers / Application State
-     ↓
-Services / REST API Integration
-     ↓
-Backend & AI Services
+Screens / Widgets
+       │
+       ▼
+Providers
+(ChangeNotifier)
+       │
+       ▼
+Services
+(API / Auth / Chat / Receipt)
+       │
+       ▼
+REST Backend
+       │
+       ├── Financial Services
+       └── AI-backed Services
 ```
 
-This approach kept presentation, state, and API communication separated while making it easier to integrate work produced by different members of the team.
+Screens and widgets handle presentation and user interaction. Providers hold feature state and coordinate asynchronous operations. Service classes isolate external communication such as authentication, general API requests, chat, dashboard data, and receipt processing. Models represent structured application data.
 
-## Product Capabilities
+This keeps most networking and feature state outside the UI layer without overstating the project as Clean Architecture or another pattern it does not formally implement.
 
-### Expense Management
-Users can record and manage expenses while reviewing categorized financial activity and summaries.
+## Project Structure
 
-### Financial Goals
-The application allows users to create financial goals and monitor their progress over time.
-
-### Savings Planning
-Alpha includes savings allocation and planning functionality designed to help users organize their financial priorities.
-
-### Smart Financial Insights
-The application presents financial insights derived from user-provided data to make spending and financial patterns easier to understand.
-
-### Voice Interaction
-Voice-assisted functionality allows supported financial interactions to be performed through a more natural mobile experience.
-
-### Receipt Analysis
-Receipt-processing functionality is integrated into the application to support faster transaction capture and analysis.
-
-### Financial Chatbot
-An AI-powered chatbot provides an interactive interface for financial questions and guidance within the application.
-
-## Team Project
-
-Alpha was developed by a multidisciplinary team with responsibilities divided across:
-
-- Flutter / Mobile Development
-- Backend Development
-- AI Development
-
-The project required coordination between the mobile interface, REST APIs, and AI-powered services to deliver a unified user experience.
+```text
+flutter/
+├── assets/
+│   ├── images/
+│   └── translations/
+│
+└── lib/
+    ├── config/
+    ├── core/
+    ├── media/
+    ├── models/
+    ├── providers/
+    ├── screens/
+    │   ├── ai_assistant/
+    │   ├── analysis/
+    │   ├── auth/
+    │   ├── challenges/
+    │   ├── expenses/
+    │   ├── goals/
+    │   ├── home/
+    │   ├── incomes/
+    │   ├── notifications/
+    │   ├── onboarding/
+    │   ├── planning/
+    │   ├── profile/
+    │   ├── receipts/
+    │   ├── transactions/
+    │   └── voice/
+    ├── services/
+    ├── widgets/
+    └── main.dart
+```
 
 ## Screenshots
 
-Application screenshots will be added here to demonstrate the main user flows and interface design.
+### Authentication Flow
 
-<!-- Example layout after screenshots are uploaded:
+<table>
+  <tr>
+    <td align="center"><strong>Login</strong></td>
+    <td align="center"><strong>Forgot Password</strong></td>
+    <td align="center"><strong>Create Account</strong></td>
+    <td align="center"><strong>Birth Date</strong></td>
+  </tr>
+  <tr>
+    <td><img src="assets/screenshots/authentication/login.png" width="210" /></td>
+    <td><img src="assets/screenshots/authentication/forgot-password.png" width="210" /></td>
+    <td><img src="assets/screenshots/authentication/create-account.png" width="210" /></td>
+    <td><img src="assets/screenshots/authentication/birth-date.png" width="210" /></td>
+  </tr>
+</table>
 
-| Home | Expenses | Goals |
-|------|----------|-------|
-| ![](screenshots/home.png) | ![](screenshots/expenses.png) | ![](screenshots/goals.png) |
+Additional product screenshots cover the dashboard, expenses, financial goals, receipt scanning, voice input, AI assistant, financial analysis, profile, and both light and dark themes.
 
-| AI Assistant | Analytics | Profile |
-|-------------|-----------|---------|
-| ![](screenshots/ai-assistant.png) | ![](screenshots/analytics.png) | ![](screenshots/profile.png) |
--->
+## Technical Highlights
 
-## Repository Note
+From a Flutter-development perspective, this project demonstrates:
 
-This repository is intentionally maintained as a **showcase repository**. It presents the product, technical approach, and my Flutter contribution without publishing the team's full production source code.
+- Multi-feature Flutter application development
+- Provider-based state management across multiple domains
+- REST API integration across authentication and financial workflows
+- Token-based session handling and refresh-token support
+- Multi-step onboarding and guarded application flows
+- Forms, validation, and asynchronous UI states
+- Arabic localization and RTL UI
+- Local persistence for application preferences
+- Speech-to-text integration
+- Camera and gallery workflows
+- Receipt-processing integration
+- Audio playback
+- Financial data visualization
+- Team-based frontend/backend integration
 
-## Disclaimer
+## Source Code
 
-Alpha provides financial insights and analyses based on user-entered data. It is not a financial intermediary, licensed investment advisor, or payment platform. Any generated outputs are intended as non-binding technical guidance.
+This repository is intentionally maintained as a **public portfolio showcase**.
 
----
+The complete production repository contains work from multiple team members and is therefore not published here as my individual source code. This showcase focuses on the product, the Flutter architecture, and the parts I was responsible for implementing and integrating.
 
-**Role:** Flutter Developer  
+## Future Improvements
+
+- Expand automated widget and integration testing
+- Add CI/CD for Flutter analysis and build verification
+- Improve offline caching for selected financial data
+- Strengthen accessibility and semantic-label testing
+- Continue breaking larger feature providers into smaller, more focused units as the application grows
+
+## Author
+
+**Mariam — Flutter Developer**
+
+GitHub: [@mariamsawwa12](https://github.com/mariamsawwa12)
+
 **Project Type:** Team Project  
-**Focus:** Mobile UI Development, State Management, Localization, REST API Integration
+**Primary Focus:** Flutter UI, State Management, REST API Integration, Localization & Mobile UX
