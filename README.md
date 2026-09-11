@@ -172,24 +172,80 @@ flutter/
 
 ## Screenshots
 
-### Authentication Flow
+### Authentication
 
 <table>
   <tr>
     <td align="center"><strong>Login</strong></td>
-    <td align="center"><strong>Forgot Password</strong></td>
     <td align="center"><strong>Create Account</strong></td>
-    <td align="center"><strong>Birth Date</strong></td>
+    <td align="center"><strong>OTP Verification</strong></td>
+    <td align="center"><strong>Forgot Password</strong></td>
   </tr>
   <tr>
-    <td><img src="assets/screenshots/authentication/login.png" width="210" /></td>
-    <td><img src="assets/screenshots/authentication/forgot-password.png" width="210" /></td>
-    <td><img src="assets/screenshots/authentication/create-account.png" width="210" /></td>
-    <td><img src="assets/screenshots/authentication/birth-date.png" width="210" /></td>
+    <td><img src="assets/screenshots/authentication/login.png" width="205" /></td>
+    <td><img src="assets/screenshots/authentication/create-account.png" width="205" /></td>
+    <td><img src="assets/screenshots/authentication/otp.png" width="205" /></td>
+    <td><img src="assets/screenshots/authentication/forgot-password.png" width="205" /></td>
   </tr>
 </table>
 
-Additional product screenshots cover the dashboard, expenses, financial goals, receipt scanning, voice input, AI assistant, financial analysis, profile, and both light and dark themes.
+### Financial Experience
+
+<table>
+  <tr>
+    <td align="center"><strong>Home Dashboard</strong></td>
+    <td align="center"><strong>Financial Onboarding</strong></td>
+    <td align="center"><strong>Income Distribution</strong></td>
+  </tr>
+  <tr>
+    <td><img src="assets/screenshots/product/home-dashboard.jpg" width="260" /></td>
+    <td><img src="assets/screenshots/product/financial-onboarding.jpg" width="260" /></td>
+    <td><img src="assets/screenshots/product/income-distribution.jpg" width="260" /></td>
+  </tr>
+</table>
+
+### Expenses & Goals
+
+<table>
+  <tr>
+    <td align="center"><strong>Expense Analytics</strong></td>
+    <td align="center"><strong>Savings Planning</strong></td>
+    <td align="center"><strong>Add Financial Goal</strong></td>
+  </tr>
+  <tr>
+    <td><img src="assets/screenshots/product/expenses-analytics.jpg" width="260" /></td>
+    <td><img src="assets/screenshots/product/savings-planning.jpg" width="260" /></td>
+    <td><img src="assets/screenshots/product/add-goal.jpg" width="260" /></td>
+  </tr>
+</table>
+
+### Smart Features
+
+<table>
+  <tr>
+    <td align="center"><strong>Receipt Scanner</strong></td>
+    <td align="center"><strong>Voice Expense Entry</strong></td>
+    <td align="center"><strong>AI Assistant</strong></td>
+  </tr>
+  <tr>
+    <td><img src="assets/screenshots/product/receipt-scanner.jpg" width="260" /></td>
+    <td><img src="assets/screenshots/product/voice-expense.jpg" width="260" /></td>
+    <td><img src="assets/screenshots/product/ai-assistant.jpg" width="260" /></td>
+  </tr>
+</table>
+
+### Analysis & Profile
+
+<table>
+  <tr>
+    <td align="center"><strong>Financial Analysis</strong></td>
+    <td align="center"><strong>Profile</strong></td>
+  </tr>
+  <tr>
+    <td><img src="assets/screenshots/product/financial-analysis.jpg" width="260" /></td>
+    <td><img src="assets/screenshots/product/profile.jpg" width="260" /></td>
+  </tr>
+</table>
 
 ## Technical Highlights
 
