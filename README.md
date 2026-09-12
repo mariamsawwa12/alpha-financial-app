@@ -12,7 +12,7 @@
 
 **A bilingual Flutter mobile application that brings expense tracking, financial planning, savings goals, receipt processing, voice interaction, and AI-assisted financial services into one experience.**
 
-[Overview](#overview) • [Features](#key-features) • [My Contribution](#my-contribution) • [Screenshots](#screenshots) • [Architecture](#architecture)
+[Overview](#overview) • [Screenshots](#screenshots) • [Features](#key-features) • [My Contribution](#my-contribution) • [Architecture](#architecture) • [Tech Stack](#tech-stack)
 
 </div>
 
@@ -21,6 +21,8 @@
 ## Overview
 
 Alpha helps users organize daily financial activity, plan income and savings, track goals, and understand their financial position through a unified mobile experience.
+
+Alpha was developed as a multidisciplinary team project involving **Flutter, Backend, and AI development**. My responsibility was the **Flutter mobile application and service integration**.
 
 ### The Product at a Glance
 
@@ -31,166 +33,6 @@ Alpha helps users organize daily financial activity, plan income and savings, tr
 | Reduce manual entry | Receipt capture and voice-assisted expense input |
 | Understand financial health | Dashboard summaries, analysis, notifications, and AI-assisted guidance |
 | Use the app comfortably | Arabic/English localization, RTL support, and light/dark themes |
-
-Alpha was developed as a multidisciplinary team project involving **Flutter, Backend, and AI development**. My responsibility was the **Flutter mobile application and service integration**.
-
-## Key Features
-
-- Account registration, login, OTP verification, and password recovery
-- Multi-step personal and financial onboarding
-- Expense creation, categorization, and analytics
-- Financial-cycle management and dashboard summaries
-- Income, fixed-expense, variable-expense, and savings planning
-- Financial goals with target amounts, dates, priorities, and planned contributions
-- Receipt capture and receipt-analysis workflow
-- Voice-assisted expense input and speech-to-text interaction
-- AI-backed financial assistant integrated through backend services
-- Financial analysis with audio playback support
-- In-app financial notifications and unread-state handling
-- Arabic and English localization with RTL support
-- Light and dark themes with locally persisted preferences
-
-## My Contribution
-
-I worked on Alpha as a **Flutter Developer**. My work focused on the mobile application rather than the backend or AI model development.
-
-My responsibilities included:
-
-- Designing and implementing Flutter screens and user flows
-- Building reusable widgets and maintaining a consistent mobile UI
-- Managing application state using **Provider / ChangeNotifier**
-- Integrating Flutter features with the team's **REST APIs**
-- Connecting authentication, OTP, expenses, goals, profile, financial-cycle, notification, chat, receipt, and analysis flows to backend services
-- Handling loading, validation, success, and error states in the mobile experience
-- Implementing navigation across authentication, onboarding, dashboard, expenses, goals, AI assistant, and profile flows
-- Implementing Arabic/English localization and RTL behavior
-- Implementing light/dark theme support and persistent user preferences
-- Integrating speech-to-text, camera/gallery input, receipt workflows, and audio playback on the Flutter side
-- Collaborating with Backend and AI team members during API and feature integration
-- Using Git and GitHub for collaborative development
-
-### Contribution Scope
-
-| Area | Responsibility |
-| --- | --- |
-| Flutter UI & mobile experience | **My contribution** |
-| Flutter state management | **My contribution** |
-| REST API integration in Flutter | **My contribution** |
-| Navigation & frontend workflows | **My contribution** |
-| Localization & theming | **My contribution** |
-| Backend development | Team member |
-| AI model / AI backend development | Team member |
-
-The backend services and AI implementation were developed by other members of the team. My role was to integrate those capabilities into the Flutter application.
-
-## Tech Stack
-
-### Mobile
-- Flutter
-- Dart
-
-### State Management
-- Provider
-- ChangeNotifier
-
-### Backend Integration
-- REST APIs
-- Dart `http`
-- JSON response mapping
-- Access-token and refresh-token handling
-
-### Local Persistence
-- SharedPreferences
-
-### Localization
-- easy_localization
-- Arabic / English
-- RTL support
-
-### Media & Interaction
-- image_picker
-- camera
-- speech_to_text
-- record
-- just_audio
-
-### UI & Visualization
-- fl_chart
-- percent_indicator
-- google_fonts
-- table_calendar
-- smooth_page_indicator
-- pinput
-
-### Receipt Processing
-- google_mlkit_text_recognition
-- Camera/gallery receipt input
-- Backend receipt-analysis integration
-
-### Development
-- Git
-- GitHub
-
-## Architecture
-
-The Flutter application uses a practical layered structure with **Provider-based state management**.
-
-```text
-Screens / Widgets
-       │
-       ▼
-Providers
-(ChangeNotifier)
-       │
-       ▼
-Services
-(API / Auth / Chat / Receipt)
-       │
-       ▼
-REST Backend
-       │
-       ├── Financial Services
-       └── AI-backed Services
-```
-
-Screens and widgets handle presentation and user interaction. Providers hold feature state and coordinate asynchronous operations. Service classes isolate external communication such as authentication, general API requests, chat, dashboard data, and receipt processing. Models represent structured application data.
-
-This keeps most networking and feature state outside the UI layer without overstating the project as Clean Architecture or another pattern it does not formally implement.
-
-## Project Structure
-
-```text
-flutter/
-├── assets/
-│   ├── images/
-│   └── translations/
-│
-└── lib/
-    ├── config/
-    ├── core/
-    ├── media/
-    ├── models/
-    ├── providers/
-    ├── screens/
-    │   ├── ai_assistant/
-    │   ├── analysis/
-    │   ├── auth/
-    │   ├── challenges/
-    │   ├── expenses/
-    │   ├── goals/
-    │   ├── home/
-    │   ├── incomes/
-    │   ├── notifications/
-    │   ├── onboarding/
-    │   ├── planning/
-    │   ├── profile/
-    │   ├── receipts/
-    │   ├── transactions/
-    │   └── voice/
-    ├── services/
-    ├── widgets/
-    └── main.dart
-```
 
 ## Screenshots
 
@@ -269,22 +111,174 @@ flutter/
   </tr>
 </table>
 
+## Key Features
+
+- Account registration, login, OTP verification, and password recovery
+- Multi-step personal and financial onboarding
+- Expense creation, categorization, and analytics
+- Financial-cycle management and dashboard summaries
+- Income, fixed-expense, variable-expense, and savings planning
+- Financial goals with target amounts, dates, priorities, and planned contributions
+- Receipt capture and receipt-analysis workflow
+- Voice-assisted expense input and speech-to-text interaction
+- AI-backed financial assistant integrated through backend services
+- Financial analysis with audio playback support
+- In-app financial notifications and unread-state handling
+- Arabic and English localization with RTL support
+- Light and dark themes with locally persisted preferences
+
+## My Contribution
+
+I worked on Alpha as a **Flutter Developer**, focusing on the mobile application and integrating the services delivered by the Backend and AI team members.
+
+My responsibilities included:
+
+- Designing and implementing Flutter screens, navigation, and end-to-end user flows
+- Building reusable widgets and maintaining consistent mobile UI behavior
+- Managing feature state with **Provider / ChangeNotifier**
+- Integrating Flutter features with the team's **REST APIs**
+- Connecting authentication, OTP, expenses, goals, profile, financial cycles, notifications, chat, receipt, and analysis flows
+- Implementing Arabic/English localization, RTL behavior, light/dark themes, and persistent preferences
+- Integrating speech-to-text, camera/gallery input, receipt workflows, and audio playback on the Flutter side
+- Collaborating with Backend and AI team members during integration and testing
+- Using Git and GitHub for collaborative development
+
+### Contribution Scope
+
+| Area | Responsibility |
+| --- | --- |
+| Flutter UI & mobile experience | **My contribution** |
+| Flutter state management | **My contribution** |
+| REST API integration in Flutter | **My contribution** |
+| Navigation & frontend workflows | **My contribution** |
+| Localization & theming | **My contribution** |
+| Backend development | Team member |
+| AI model / AI backend development | Team member |
+
+The backend services and AI implementation were developed by other members of the team. My role was to integrate those capabilities into the Flutter application.
+
+## Architecture
+
+The Flutter application uses a practical layered structure with **Provider-based state management**.
+
+```text
+Screens / Widgets
+       │
+       ▼
+Providers
+(ChangeNotifier)
+       │
+       ▼
+Services
+(API / Auth / Chat / Receipt)
+       │
+       ▼
+REST Backend
+       │
+       ├── Financial Services
+       └── AI-backed Services
+```
+
+Screens and widgets handle presentation and user interaction. Providers hold feature state and coordinate asynchronous operations. Service classes isolate external communication such as authentication, general API requests, chat, dashboard data, and receipt processing. Models represent structured application data.
+
+This keeps networking and feature state mostly outside the UI layer without overstating the project as Clean Architecture or another pattern it does not formally implement.
+
+## Tech Stack
+
+### Mobile
+- Flutter
+- Dart
+
+### State Management
+- Provider
+- ChangeNotifier
+
+### Backend Integration
+- REST APIs
+- Dart `http`
+- JSON response mapping
+- Access-token and refresh-token handling
+
+### Local Persistence
+- SharedPreferences
+
+### Localization
+- easy_localization
+- Arabic / English
+- RTL support
+
+### Media & Interaction
+- image_picker
+- camera
+- speech_to_text
+- record
+- just_audio
+
+### UI & Visualization
+- fl_chart
+- percent_indicator
+- google_fonts
+- table_calendar
+- smooth_page_indicator
+- pinput
+
+### Receipt Processing
+- google_mlkit_text_recognition
+- Camera/gallery receipt input
+- Backend receipt-analysis integration
+
+### Development
+- Git
+- GitHub
+
+## Project Structure
+
+```text
+flutter/
+├── assets/
+│   ├── images/
+│   └── translations/
+│
+└── lib/
+    ├── config/
+    ├── core/
+    ├── media/
+    ├── models/
+    ├── providers/
+    ├── screens/
+    │   ├── ai_assistant/
+    │   ├── analysis/
+    │   ├── auth/
+    │   ├── challenges/
+    │   ├── expenses/
+    │   ├── goals/
+    │   ├── home/
+    │   ├── incomes/
+    │   ├── notifications/
+    │   ├── onboarding/
+    │   ├── planning/
+    │   ├── profile/
+    │   ├── receipts/
+    │   ├── transactions/
+    │   └── voice/
+    ├── services/
+    ├── widgets/
+    └── main.dart
+```
+
 ## Technical Highlights
 
-From a Flutter-development perspective, this project demonstrates:
+This project demonstrates practical experience with:
 
 - Multi-feature Flutter application development
-- Provider-based state management across multiple domains
+- Provider-based state management
 - REST API integration across authentication and financial workflows
 - Token-based session handling and refresh-token support
 - Multi-step onboarding and guarded application flows
 - Forms, validation, and asynchronous UI states
 - Arabic localization and RTL UI
 - Local persistence for application preferences
-- Speech-to-text integration
-- Camera and gallery workflows
-- Receipt-processing integration
-- Audio playback
+- Speech-to-text, camera/gallery, receipt-processing, and audio workflows
 - Financial data visualization
 - Team-based frontend/backend integration
 
