@@ -1,14 +1,38 @@
+<div align="center">
+
+<img src="assets/logo.png" width="120" alt="Alpha Financial App logo" />
+
 # Alpha Financial App
 
-**A Flutter-based personal finance application for managing expenses, financial goals, savings, and financial planning, with AI-assisted services integrated into the mobile experience.**
+### AI-Assisted Personal Finance Experience Built with Flutter
 
-> **Portfolio showcase:** this repository presents the product and my Flutter contribution. The complete team source code is intentionally not published here.
+[![Flutter](https://img.shields.io/badge/Flutter-Mobile_App-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev)
+[![Dart](https://img.shields.io/badge/Dart-Frontend-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev)
+![Provider](https://img.shields.io/badge/State_Management-Provider-6C63FF?style=for-the-badge)
+![Team Project](https://img.shields.io/badge/Project-Team_Project-5B2C83?style=for-the-badge)
+![Source](https://img.shields.io/badge/Source-Private-red?style=for-the-badge)
+
+**A bilingual Flutter mobile application that brings expense tracking, financial planning, savings goals, receipt processing, voice interaction, and AI-assisted financial services into one experience.**
+
+[Overview](#overview) • [Features](#key-features) • [My Contribution](#my-contribution) • [Screenshots](#screenshots) • [Architecture](#architecture)
+
+</div>
+
+> **Portfolio showcase:** This public repository presents the product and my Flutter contribution. The complete team source code is intentionally not published here.
 
 ## Overview
 
-Alpha is a personal finance mobile application designed to help users understand and organize their day-to-day financial activity in one place.
+Alpha helps users organize daily financial activity, plan income and savings, track goals, and understand their financial position through a unified mobile experience.
 
-The application combines expense management, financial planning, savings allocation, goal tracking, financial cycles, notifications, receipt processing, voice interaction, and AI-assisted financial features.
+### The Product at a Glance
+
+| User Need | Alpha Experience |
+| --- | --- |
+| Organize everyday spending | Expense creation, categorization, transaction views, and visual analytics |
+| Plan income responsibly | Guided allocation across expenses, savings, goals, and financial cycles |
+| Reduce manual entry | Receipt capture and voice-assisted expense input |
+| Understand financial health | Dashboard summaries, analysis, notifications, and AI-assisted guidance |
+| Use the app comfortably | Arabic/English localization, RTL support, and light/dark themes |
 
 Alpha was developed as a multidisciplinary team project involving **Flutter, Backend, and AI development**. My responsibility was the **Flutter mobile application and service integration**.
 
