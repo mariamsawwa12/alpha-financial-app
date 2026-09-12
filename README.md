@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="assets/logo.png" width="120" alt="Alpha Financial App logo" />
-
 # Alpha Financial App
 
 ### AI-Assisted Personal Finance Experience Built with Flutter
